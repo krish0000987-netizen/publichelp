@@ -92,6 +92,16 @@
       <span class="logo-text">PUBLIC HELP</span>
       <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
     </div>
+    <div class="mobile-lang-wrap">
+      <label for="langSelectMobile"><i class="fa-solid fa-globe"></i> Language:</label>
+      <select id="langSelectMobile" class="lang-select mobile-lang-select" aria-label="Select Language">
+        <option value="en">English</option>
+        <option value="hi">हिंदी (Hindi)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="gu">ગુજરાતી (Gujarati)</option>
+        <option value="mr">मराठी (Marathi)</option>
+      </select>
+    </div>
     <ul class="mobile-nav-list">
       <li><a href="#home" class="mobile-nav-link">Home</a></li>
       <li><a href="#about" class="mobile-nav-link">About Us</a></li>
@@ -1041,6 +1051,19 @@
       <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
   </div>
+
+  <!-- Google Translate Hidden Widget -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,bn,gu,mr,ta,te,kn,pa,ur',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <!-- QR Code Library Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
