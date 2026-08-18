@@ -245,7 +245,28 @@ button, input, select, textarea {
   color: #64748b;
 }
 
-/* Sky Blue Login Button (Image 1: Sky Blue filled CTA) */
+/* Header Quick Call Button */
+.btn-header-call {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  border: 1px solid #bae6fd;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.btn-header-call:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
 .btn-login {
   background: var(--sky-blue);
   color: #ffffff;
@@ -2250,6 +2271,10 @@ button, input, select, textarea {
 /* ==========================================================================
    Responsive Media Queries
    ========================================================================== */
+/* ==========================================================================
+   Comprehensive Responsive Media Queries for 100% Mobile Friendliness
+   ========================================================================== */
+
 @media (max-width: 1024px) {
   .highlights-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2262,13 +2287,19 @@ button, input, select, textarea {
   }
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .care-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
 }
 
 @media (max-width: 768px) {
+  /* Hide Top Bar & Desktop Nav */
   .top-bar {
     display: none;
   }
@@ -2278,38 +2309,255 @@ button, input, select, textarea {
   .mobile-menu-btn {
     display: flex;
   }
-  .hero-section {
-    height: 480px;
+  
+  .header-container {
+    height: 64px;
   }
+
+  .logo-text {
+    font-size: 1.35rem;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .lang-select {
+    padding: 6px 24px 6px 8px;
+    font-size: 0.8rem;
+  }
+
+  .btn-header-call span {
+    display: none;
+  }
+
+  .btn-header-call {
+    padding: 8px 12px;
+    border-radius: 50%;
+  }
+
+  /* Section Spacing */
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Hero Slider on Mobile */
+  .hero-section {
+    min-height: 480px;
+    height: calc(100vh - 64px);
+    max-height: 580px;
+  }
+
   .hero-title {
     font-size: 1.9rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
   }
+
   .hero-description {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 22px;
   }
-  .features-grid, .services-grid, .care-showcase-grid, .gallery-grid, .booking-wrapper, .contact-grid {
-    grid-template-columns: 1fr;
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
   }
-  .highlights-grid {
-    grid-template-columns: 1fr;
+
+  .btn-hero-primary, .btn-hero-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.92rem;
   }
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  .form-row {
-    grid-template-columns: 1fr;
-  }
+
   .slider-arrow {
     width: 38px;
     height: 38px;
+    font-size: 0.95rem;
   }
-  .arrow-prev { left: 12px; }
-  .arrow-next { right: 12px; }
+  .arrow-prev { left: 10px; }
+  .arrow-next { right: 10px; }
+
+  /* Highlights & Features Grid */
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .features-grid, .services-grid, .care-showcase-grid, .booking-wrapper, .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-badges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .call-direct-link {
+    justify-content: center;
+  }
+
+  /* Services Section */
+  .faded-bg-text {
+    font-size: 20vw;
+    top: 30px;
+  }
+
+  .service-card {
+    padding: 26px 20px;
+  }
+
+  /* Care Cards on Mobile */
+  .care-image-wrap {
+    height: 240px;
+  }
+
+  .care-content {
+    padding: 20px;
+  }
+
+  .care-highlights {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .care-content-full {
+    padding: 24px 18px;
+  }
+
+  .care-tag-wrap {
+    gap: 6px;
+  }
+
+  .tag-pill {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+  }
+
+  .care-actions-row {
+    flex-direction: column;
+  }
+
+  .btn-care-whatsapp, .btn-outline {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* CTA Banner */
+  .cta-banner-card {
+    padding: 36px 20px;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-desc {
+    font-size: 0.95rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-cta-primary, .btn-cta-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Booking & Contact Forms */
+  .booking-card, .contact-form-card, .contact-info-card {
+    padding: 24px 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-control {
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+    padding: 12px 14px;
+  }
+
+  /* Footer on Mobile */
+  .footer-main {
+    padding: 40px 16px 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  /* Floating WhatsApp Button */
   .whatsapp-float-btn {
-    bottom: 20px;
-    right: 20px;
+    bottom: 16px;
+    right: 16px;
     width: 52px;
     height: 52px;
     font-size: 1.7rem;
+  }
+
+  .whatsapp-tooltip {
+    display: none; /* Clean on mobile touch */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+  }
+
+  .feature-card {
+    padding: 22px 16px;
+  }
+
+  .service-card {
+    padding: 22px 16px;
+  }
+
+  .care-content {
+    padding: 18px 14px;
+  }
+
+  .btn-primary, .btn-outline-service, .btn-care-whatsapp, .btn-submit-message {
+    font-size: 0.9rem;
+    padding: 12px 16px;
   }
 }
