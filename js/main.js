@@ -359,11 +359,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const src = item.getAttribute('data-img');
-      const title = item.getAttribute('data-title');
-      openLightbox(src, title);
+  document.querySelectorAll('.care-img, .care-wide-img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+      openLightbox(img.src, img.alt);
     });
   });
 
